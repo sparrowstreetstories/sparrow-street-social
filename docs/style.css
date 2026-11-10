@@ -1,0 +1,8 @@
+:root { --bg:#FFF6E9; --ink:#3B2F2F; --plum:#7A3E65; --sun:#F2B33D; --muted:#6E5F57; }
+@media (prefers-color-scheme: dark) { :root { --bg:#221B19; --ink:#F6EBDD; --plum:#D69AC2; --muted:#C7B6A6; } }
+body { background:var(--bg); color:var(--ink); font-family:"Andika","Gill Sans","Segoe UI",sans-serif; line-height:1.6; margin:0; padding:32px 16px 64px; }
+main { max-width:720px; margin:0 auto; }
+h1,h2 { font-family:"Fredoka","Avenir Next","Trebuchet MS",sans-serif; }
+h1 { font-size:36px; margin:12px 0 4px; } h2 { font-size:22px; margin-top:28px; color:var(--plum); }
+img.logo { width:96px; height:96px; border-radius:50%; }
+a { color:var(--plum); } .muted { color:var(--muted); font-size:14px; }
