@@ -1,0 +1,18 @@
+name: Check Meta key (read-only)
+on: workflow_dispatch
+permissions: {}
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read-only checks
+        env:
+          TOKEN: ${{ secrets.META_TOKEN }}
+          PAGE_ID: ${{ vars.PAGE_ID }}
+          IG: ${{ vars.IG_USER_ID }}
+        run: |
+          G=https://graph.facebook.com/v23.0
+          for p in "me?fields=id,name" "$PAGE_ID?fields=name" "$IG?fields=username" "debug_token?input_token=$TOKEN"; do
+            echo "== ${p%%\?*}" | sed "s/$TOKEN/[hidden]/"
+            curl -s "$G/$p" -H "Authorization: Bearer $TOKEN" | jq -c '{name, username, error: .error.message, code: .error.code, sub: .error.error_subcode, data: (.data | if . then {is_valid, type, application, expires_at, error, granular_scopes: (.granular_scopes|length)} else null end)}'
+          done
