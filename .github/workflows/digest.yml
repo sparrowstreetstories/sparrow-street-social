@@ -1,0 +1,18 @@
+name: Weekly report
+# Mondays 08:00 UK: opens a "Weekly report" issue (GitHub emails it to hello.sparrowstreet@gmail.com).
+on:
+  schedule:
+    - cron: "0 8 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Write the report
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 robot/digest.py

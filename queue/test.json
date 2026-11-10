@@ -1,0 +1,22 @@
+[
+  {
+    "id": "test-verse-card",
+    "test": true,
+    "when": "2026-11-10 12:00",
+    "title": "Robot test (dry run only, never published)",
+    "type": "image",
+    "platforms": ["instagram", "facebook"],
+    "media": ["test-verse-card.png"],
+    "caption_instagram": "Robot test: this is never published.",
+    "caption_facebook": "Robot test: this is never published."
+  },
+  {
+    "id": "test-story",
+    "test": true,
+    "when": "2026-11-10 12:00",
+    "title": "Robot story test (dry run only, never published)",
+    "type": "story",
+    "platforms": ["instagram", "facebook"],
+    "media": ["test-verse-card.png"]
+  }
+]

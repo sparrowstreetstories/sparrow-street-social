@@ -1,8 +1,24 @@
 <!doctype html>
 <html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pinterest connected</title><link rel="stylesheet" href="style.css"></head>
+<title>Pinterest connected</title><link rel="stylesheet" href="style.css">
+<style>.code{font-family:ui-monospace,Menlo,monospace;font-size:20px;background:rgba(242,179,61,0.25);padding:12px 16px;border-radius:10px;word-break:break-all;display:block;margin:12px 0}button{font:inherit;padding:10px 18px;border-radius:999px;border:0;background:var(--plum);color:#fff;cursor:pointer}</style></head>
 <body><main>
 <h1>Pinterest is connected</h1>
-<p>Thank you. You can close this window and go back to the Sparrow Street set-up.</p>
-<p class="muted">This page is only used once, when Sparrow Street connects its own Pinterest account to its posting tool. It doesn't store anything.</p>
-</main></body></html>
+<div id="ok" hidden>
+<p>Copy this one-time code and paste it into the Terminal window that's waiting for it:</p>
+<span class="code" id="code"></span>
+<button id="copy">Copy code</button> <span id="done" class="muted"></span>
+<p class="muted">The code only works once and only for a few minutes. It's shown on your screen only: this page doesn't send or store it anywhere.</p>
+</div>
+<p id="none">Thank you. You can close this window and go back to the Sparrow Street set-up.</p>
+<p class="muted">This page is only used when Sparrow Street connects its own Pinterest account to its posting tool.</p>
+</main>
+<script>
+const q = new URLSearchParams(location.search), c = q.get("code");
+if (c) {
+  document.getElementById("ok").hidden = false; document.getElementById("none").hidden = true;
+  document.getElementById("code").textContent = c;
+  document.getElementById("copy").onclick = () => navigator.clipboard.writeText(c).then(() => document.getElementById("done").textContent = "Copied ✓");
+}
+</script>
+</body></html>
