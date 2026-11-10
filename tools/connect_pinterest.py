@@ -24,7 +24,7 @@ import webbrowser
 
 APP_ID = "1637347"
 REDIRECT = "https://sparrowstreetstories.com/pinterest-callback.html"
-SCOPES = "boards:read,pins:read,pins:write"
+SCOPES = "boards:read,pins:read,pins:write,user_accounts:read"
 REPO = "sparrowstreetstories/sparrow-street-social"
 GH = "/opt/homebrew/bin/gh"
 
@@ -71,11 +71,18 @@ def main():
     refresh, access = tok.get("refresh_token"), tok.get("access_token")
     if not (refresh and access):
         sys.exit("Pinterest didn't return a key. Please run this again.")
-    user = get("https://api.pinterest.com/v5/user_account", access).get("username", "?")
-    boards = [b["name"] for b in get("https://api.pinterest.com/v5/boards?page_size=100", access).get("items", [])]
+    # store the keys first, so a hiccup in the checks below can't lose them
     store("PINTEREST_APP_SECRET", secret)
     store("PINTEREST_REFRESH_TOKEN", refresh)
     store("PINTEREST_APP_ID", APP_ID, secret=False)
+    try:
+        user = get("https://api.pinterest.com/v5/user_account", access).get("username", "?")
+    except urllib.error.HTTPError:
+        user = "?"
+    try:
+        boards = [b["name"] for b in get("https://api.pinterest.com/v5/boards?page_size=100", access).get("items", [])]
+    except urllib.error.HTTPError:
+        boards = []
     print(f"\n✅ Done. Connected to Pinterest as @{user}. Keys stored safely in GitHub.")
     print("   Boards I can see: " + (", ".join(boards) or "none"))
     print("   Tell Claude: \"Pinterest connected\".")
