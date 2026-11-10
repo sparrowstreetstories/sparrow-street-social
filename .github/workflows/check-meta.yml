@@ -1,0 +1,22 @@
+name: Check Meta key (read-only)
+# Reads the names and IDs of the Page and Instagram account the key can reach. Posts nothing.
+# Never prints the key: only selected fields are shown.
+on: workflow_dispatch
+permissions: {}
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read Page and Instagram details
+        env:
+          TOKEN: ${{ secrets.META_TOKEN }}
+        run: |
+          set -euo pipefail
+          G=https://graph.facebook.com/v23.0
+          echo "== who the key belongs to"
+          curl -s "$G/me?fields=id,name" -H "Authorization: Bearer $TOKEN" | jq '{id, name, error: .error.message}'
+          echo "== permissions granted"
+          curl -s "$G/me/permissions" -H "Authorization: Bearer $TOKEN" | jq -c '[.data[]? | select(.status=="granted") | .permission], .error.message'
+          echo "== pages and their Instagram accounts"
+          curl -s "$G/me/accounts?fields=id,name,tasks,instagram_business_account%7Bid,username%7D" -H "Authorization: Bearer $TOKEN" \
+            | jq '{pages: [.data[]? | {id, name, tasks, instagram: .instagram_business_account}], error: .error.message}'
