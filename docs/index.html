@@ -16,13 +16,27 @@
     <a class="wordmark" href="./"><img src="media/profile.png" alt="" width="40" height="40">Sparrow Street</a>
     <nav aria-label="Main">
       <ul class="nav__links">
-        <li><a href="#season">Episodes</a></li>
-        <li><a href="#songs">Songs</a></li>
-        <li><a href="#churches">For churches</a></li>
+        <li><a href="episodes.html">Episodes</a></li>
+        <li><a href="songs.html">Songs</a></li>
+        <li><a href="churches.html">For churches</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="support.html">Support us</a></li>
       </ul>
     </nav>
     <a class="btn btn--primary btn--nav" href="https://www.youtube.com/@SparrowStreetStories">Watch on YouTube</a>
+    <details class="menu" data-menu>
+      <summary class="menu__btn">Menu</summary>
+      <div class="menu__panel">
+        <ul class="menu__list">
+        <li><a href="episodes.html">Episodes</a></li>
+        <li><a href="songs.html">Songs</a></li>
+        <li><a href="churches.html">For churches</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="support.html">Support us</a></li>
+        </ul>
+        <a class="btn btn--primary" href="https://www.youtube.com/@SparrowStreetStories">Watch on YouTube</a>
+      </div>
+    </details>
   </div>
 </header>
 
@@ -178,9 +192,10 @@
     <nav aria-label="On this site">
       <h2 class="footer__head">On this site</h2>
       <ul>
-        <li><a href="#season">Episodes</a></li>
-        <li><a href="#songs">Songs</a></li>
-        <li><a href="#churches">For churches</a></li>
+        <li><a href="episodes.html">Episodes</a></li>
+        <li><a href="songs.html">Songs</a></li>
+        <li><a href="churches.html">For churches</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="support.html">Support us</a></li>
         <li><a href="privacy.html">Privacy</a></li>
       </ul>
@@ -203,6 +218,12 @@
     };
     opts.forEach((o) => o.addEventListener('click', () => show(o.dataset.show)));
     show('nov');
+  });
+</script>
+<script>
+  document.querySelectorAll('[data-menu]').forEach((m) => {
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && m.open) { m.open = false; m.querySelector('summary').focus(); } });
+    document.addEventListener('click', (e) => { if (m.open && !m.contains(e.target)) m.open = false; });
   });
 </script>
 </body>
