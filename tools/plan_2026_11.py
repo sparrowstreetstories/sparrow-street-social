@@ -1,5 +1,5 @@
 """November 2026 posts: the launch weekend (approved by Peter on 11 Nov: "Add them to the queue") and 16–30 November
-(for Peter's approval). Writes the robot's queue files and a readable approval sheet from the same list, so they can't differ.
+(approved). Writes the robot's queue files and a readable approval sheet from the same list, so they can't differ.
 
     python3 tools/plan_2026_11.py
 """
@@ -111,8 +111,8 @@ def main():
     proj = ROOT.parent
     (proj / "business" / "social-posts").mkdir(exist_ok=True)
     (proj / "business" / "social-posts" / "2026-11 launch (approved).md").write_text(sheet(LAUNCH, "# Launch weekend posts · 13–15 Nov 2026 · ✅ approved by Peter 11 Nov (in the robot's queue)"))
-    (proj / "business" / "social-posts" / "2026-11-16 to 30 (for approval).md").write_text(sheet(PENDING,
-        f"# Posts for 16–30 November 2026 · for Peter's approval\n\n{len(PENDING)} posts: for each episode a release-day post and story, its song Reel with a memory-verse story, and its other two Shorts as Reels, each 30 minutes after the same Short goes up on YouTube. Instagram and Facebook; Pinterest stays off until Standard access. Nothing here posts until you approve it."))
+    (proj / "business" / "social-posts" / "2026-11-16 to 30 (approved).md").write_text(sheet(PENDING,
+        f"# Posts for 16–30 November 2026 · for Peter's approval\n\n{len(PENDING)} posts: for each episode a release-day post and story, its song Reel with a memory-verse story, and its other two Shorts as Reels, each 30 minutes after the same Short goes up on YouTube. Instagram and Facebook; Pinterest stays off until Standard access. "))
     print(len(LAUNCH), "launch posts queued;", len(PENDING), "posts waiting for approval")
 
 
