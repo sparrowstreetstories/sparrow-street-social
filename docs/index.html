@@ -1,10 +1,209 @@
 <!doctype html>
-<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sparrow Street</title><link rel="stylesheet" href="style.css"></head>
-<body><main>
-<img class="logo" src="media/profile.png" alt="Sparrow Street sparrow">
-<h1>Sparrow Street</h1>
-<p>Original animated Bible stories and songs for little ones aged 3 to 6. New episodes every Tuesday and Friday on YouTube: <a href="https://www.youtube.com/@SparrowStreetStories">youtube.com/@SparrowStreetStories</a>.</p>
-<p>This site holds the images and short videos that Sparrow Street shares on its own Instagram, Facebook and Pinterest accounts.</p>
-<p><a href="privacy.html">Privacy policy</a> · Contact: <a href="mailto:hello.sparrowstreet@gmail.com">hello.sparrowstreet@gmail.com</a></p>
-</main></body></html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparrow Street: Bible stories and songs for little ones</title>
+<meta name="description" content="Gentle animated Bible stories and memory-verse songs for children aged 3 to 6. New episodes every Tuesday and Friday, free on YouTube.">
+<meta name="theme-color" content="#FFF6E9">
+<link rel="icon" href="media/profile.png">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav__bar">
+    <a class="wordmark" href="./"><img src="media/profile.png" alt="" width="40" height="40">Sparrow Street</a>
+    <nav aria-label="Main">
+      <ul class="nav__links">
+        <li><a href="#season">Episodes</a></li>
+        <li><a href="#songs">Songs</a></li>
+        <li><a href="#churches">For churches</a></li>
+        <li><a href="support.html">Support us</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--primary btn--nav" href="https://www.youtube.com/@SparrowStreetStories">Watch on YouTube</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-head">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <h1 id="hero-head">Bible stories for little&nbsp;ones.</h1>
+        <p class="lead">Gentle cartoons and songs for ages 3 to 6, free on YouTube.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="https://www.youtube.com/@SparrowStreetStories">Watch on YouTube</a>
+          <a class="btn" href="#season">See this season</a>
+        </div>
+      </div>
+      <figure class="hero__picture sheet-photo">
+        <img src="img/hero-picnic.jpg" srcset="img/hero-picnic-800.jpg 800w, img/hero-picnic.jpg 1600w" sizes="(max-width: 60rem) 100vw, 56vw" width="1600" height="900" alt="Nana Wren, Ezra, Hana and their friends at a picnic in the park, everyone's arms in the air" fetchpriority="high">
+      </figure>
+    </div>
+  </section>
+
+  <section class="season" id="season" aria-labelledby="season-head">
+    <div class="container">
+      <div class="season__head">
+        <h2 id="season-head">This season on Sparrow Street</h2>
+        <div class="switch" role="group" aria-label="Choose a month" data-switch>
+          <button type="button" class="switch__opt" aria-pressed="true" data-show="nov">November</button>
+          <button type="button" class="switch__opt" aria-pressed="false" data-show="dec">Christmas</button>
+        </div>
+      </div>
+      <div data-state="nov">
+        <table class="index">
+          <caption class="visually-hidden">November episodes, with the Bible story and passage</caption>
+          <thead><tr><th scope="col">Out</th><th scope="col">The Bible story</th><th scope="col">Passage</th></tr></thead>
+          <tbody>
+            <tr class="index__lead"><td><time datetime="2026-11-13">Fri 13 Nov</time></td><th scope="row">God makes the world</th><td>Genesis 1 and 2</td></tr>
+            <tr><td><time datetime="2026-11-17">Tue 17 Nov</time></td><th scope="row">A boy shares his lunch</th><td>John 6:1 to 14</td></tr>
+            <tr><td><time datetime="2026-11-20">Fri 20 Nov</time></td><th scope="row">Jesus welcomes the children</th><td>Mark 10:13 to 16</td></tr>
+            <tr><td><time datetime="2026-11-24">Tue 24 Nov</time></td><th scope="row">Jesus calms the storm</th><td>Mark 4:35 to 41</td></tr>
+            <tr><td><time datetime="2026-11-27">Fri 27 Nov</time></td><th scope="row">The kind Samaritan</th><td>Luke 10:25 to 37</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div data-state="dec">
+        <table class="index">
+          <caption class="visually-hidden">The Christmas story in eight episodes, in Bible order</caption>
+          <thead><tr><th scope="col">Out</th><th scope="col">The Bible story</th><th scope="col">Passage</th></tr></thead>
+          <tbody>
+            <tr class="index__lead"><td><time datetime="2026-12-01">Tue 1 Dec</time></td><th scope="row">Zechariah’s big surprise</th><td>Luke 1:5 to 25</td></tr>
+            <tr><td><time datetime="2026-12-04">Fri 4 Dec</time></td><th scope="row">An angel visits Mary</th><td>Luke 1:26 to 38</td></tr>
+            <tr><td><time datetime="2026-12-08">Tue 8 Dec</time></td><th scope="row">Mary visits Elizabeth</th><td>Luke 1:39 to 56</td></tr>
+            <tr><td><time datetime="2026-12-11">Fri 11 Dec</time></td><th scope="row">Joseph’s dream</th><td>Matthew 1:18 to 25</td></tr>
+            <tr><td><time datetime="2026-12-15">Tue 15 Dec</time></td><th scope="row">Jesus is born</th><td>Luke 2:1 to 7</td></tr>
+            <tr><td><time datetime="2026-12-18">Fri 18 Dec</time></td><th scope="row">The shepherds hear good news</th><td>Luke 2:8 to 20</td></tr>
+            <tr><td><time datetime="2026-12-22">Tue 22 Dec</time></td><th scope="row">Simeon and Anna</th><td>Luke 2:22 to 38</td></tr>
+            <tr><td><time datetime="2026-12-25">Fri 25 Dec</time></td><th scope="row">The wise men bring gifts</th><td>Matthew 2:1 to 12</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="shape" aria-labelledby="shape-head">
+    <div class="container">
+      <h2 id="shape-head">Every episode, the same cosy shape</h2>
+      <p class="lead shape__lead">About nine minutes, so little ones always know what comes next.</p>
+      <div class="map">
+        <svg class="map__road" viewBox="0 0 1200 260" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M20 200 C 180 200, 220 70, 400 80 S 640 210, 800 190 S 1040 60, 1180 70" />
+        </svg>
+        <ol class="map__stops" aria-label="The parts of an episode, in order">
+          <li><time>0:00</time><h3>A small problem</h3><p>Something everyday goes wrong on the street.</p></li>
+          <li><time>2:40</time><h3>Gather round</h3><p>Nana opens the Story Nook.</p></li>
+          <li><time>2:50</time><h3>The Bible story</h3><p>Told with Nana’s paper puppets.</p></li>
+          <li><time>7:00</time><h3>The memory verse</h3><p>An action song to sing along to.</p></li>
+          <li><time>9:00</time><h3>Remember and pray</h3><p>Three questions, then a thank-you prayer.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="nook" aria-labelledby="nook-head">
+    <div class="container nook__grid">
+      <figure class="nook__picture sheet-photo">
+        <img src="img/paper-crowd.jpg" srcset="img/paper-crowd-800.jpg 800w, img/paper-crowd.jpg 1600w" sizes="(max-width: 60rem) 100vw, 58vw" width="1600" height="900" alt="The Story Nook's paper puppets: a boy holds out his basket of loaves and fish to Jesus beside the lake, with a huge crowd on the hill" loading="lazy">
+      </figure>
+      <div class="nook__text">
+        <h2 id="nook-head">Told in cut paper</h2>
+        <p class="lead">Each Bible story stays close to the words of Scripture.</p>
+        <ul class="facts">
+          <li>Quotes from the World English Bible (British Edition)</li>
+          <li>One passage and one memory verse each time</li>
+          <li>Hard moments kept short, then comfort straight away</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="songs" id="songs" aria-labelledby="songs-head">
+    <div class="songs__paper">
+      <div class="container">
+        <h2 id="songs-head">Sing the memory verse</h2>
+        <p class="lead">An original song in every episode, built on one Bible verse.</p>
+      </div>
+      <div class="container rail-wrap">
+        <ul class="rail" tabindex="0" aria-label="Memory-verse songs">
+          <li><img src="media/2026-11/ep001-verse.jpg" width="1080" height="1350" alt="Memory verse card: God saw everything that he had made, and, behold, it was very good. Genesis 1:31" loading="lazy"><h3>Very Good!</h3><p>Genesis 1:31</p></li>
+          <li><img src="media/2026-11/ep013-verse.jpg" width="1080" height="1350" alt="Memory verse card: God loves a cheerful giver. 2 Corinthians 9:7" loading="lazy"><h3>A Cheerful Giver</h3><p>2 Corinthians 9:7</p></li>
+          <li><img src="media/2026-11/ep008-verse.jpg" width="1080" height="1350" alt="Memory verse card: Allow the little children to come to me! Mark 10:14" loading="lazy"><h3>Come to Me</h3><p>Mark 10:14</p></li>
+          <li><img src="media/2026-11/ep014-verse.jpg" width="1080" height="1350" alt="Memory verse card: Peace! Be still! Mark 4:39" loading="lazy"><h3>Peace! Be Still!</h3><p>Mark 4:39</p></li>
+          <li><img src="media/2026-11/ep009-verse.jpg" width="1080" height="1350" alt="Memory verse card: You shall love your neighbour as yourself. Matthew 22:39" loading="lazy"><h3>Stop and Help</h3><p>Matthew 22:39</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="churches" id="churches" aria-labelledby="churches-head">
+    <div class="container churches__grid">
+      <h2 id="churches-head">Ready for Sunday morning</h2>
+      <dl class="rows">
+        <div><dt>About nine minutes</dt><dd>Long enough for a story, short enough for a children’s slot.</dd></div>
+        <div><dt>Questions in every description</dt><dd>Talk prompts for parents and teachers under each video.</dd></div>
+        <div><dt>Free on YouTube</dt><dd>Every episode, with no sign-up and nothing to buy.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="close" aria-labelledby="close-head">
+    <div class="container close__grid">
+      <div>
+        <h2 id="close-head">New every Tuesday and Friday</h2>
+        <p class="lead">Episodes go up at 2pm UK time. Every one is free, thanks to <a href="support.html">grown-ups who give</a>.</p>
+        <div class="actions"><a class="btn btn--primary" href="https://www.youtube.com/@SparrowStreetStories">Watch on YouTube</a></div>
+      </div>
+      <figure class="close__picture sheet-photo">
+        <img src="img/garden.jpg" srcset="img/garden-800.jpg 800w, img/garden.jpg 1600w" sizes="(max-width: 60rem) 100vw, 40vw" width="1600" height="900" alt="Nana Wren waves from her garden while Hana and Ezra stand beside her" loading="lazy">
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <p class="footer__mark"><img src="media/profile.png" alt="" width="56" height="56">Sparrow Street</p>
+    <nav aria-label="Watch and follow">
+      <h2 class="footer__head">Watch and follow</h2>
+      <ul>
+        <li><a href="https://www.youtube.com/@SparrowStreetStories">YouTube</a></li>
+        <li><a href="https://www.instagram.com/sparrowstreetstories/">Instagram</a></li>
+        <li><a href="https://www.facebook.com/sparrowstreetstories/">Facebook</a></li>
+        <li><a href="https://www.pinterest.com/sparrowstreetstories/">Pinterest</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="On this site">
+      <h2 class="footer__head">On this site</h2>
+      <ul>
+        <li><a href="#season">Episodes</a></li>
+        <li><a href="#songs">Songs</a></li>
+        <li><a href="#churches">For churches</a></li>
+        <li><a href="support.html">Support us</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2 class="footer__head">Say hello</h2>
+      <p><a href="mailto:hello.sparrowstreet@gmail.com">hello.sparrowstreet@gmail.com</a></p>
+    </div>
+    <p class="footer__legal">Scripture quotations are from the World English Bible (British Edition), which is in the public domain.</p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('[data-switch]').forEach((group) => {
+    const section = group.closest('section');
+    const opts = group.querySelectorAll('[data-show]');
+    const show = (key) => {
+      section.querySelectorAll('[data-state]').forEach((s) => { s.hidden = s.dataset.state !== key; });
+      opts.forEach((o) => o.setAttribute('aria-pressed', String(o.dataset.show === key)));
+    };
+    opts.forEach((o) => o.addEventListener('click', () => show(o.dataset.show)));
+    show('nov');
+  });
+</script>
+</body>
+</html>
