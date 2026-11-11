@@ -1,0 +1,60 @@
+[
+ {
+  "id": "2026-11-13-launch-post",
+  "when": "2026-11-13 14:15",
+  "title": "Launch post",
+  "type": "image",
+  "platforms": [
+   "instagram",
+   "facebook"
+  ],
+  "media": [
+   "2026-11/launch-post.jpg"
+  ],
+  "caption_instagram": "Sparrow Street is here 🐦\n\nAnimated Bible stories and songs for little ones aged 3–6. In Episode 1, \"Very Good!\", Hana thinks her drawing is \"just squiggles\"… until Nana Wren tells the very first story in the Bible.\n\nWatch free on YouTube (link in bio). New episodes every Tuesday and Friday.\n\n#BibleStoriesForKids #SundaySchool #ChristianParenting",
+  "caption_facebook": "Sparrow Street is here 🐦\n\nAnimated Bible stories and songs for little ones aged 3–6. In Episode 1, \"Very Good!\", Hana thinks her drawing is \"just squiggles\"… until Nana Wren tells the very first story in the Bible.\n\nWatch free on YouTube: https://www.youtube.com/@SparrowStreetStories\nNew episodes every Tuesday and Friday."
+ },
+ {
+  "id": "2026-11-13-launch-story",
+  "when": "2026-11-13 14:20",
+  "title": "Launch story",
+  "type": "story",
+  "platforms": [
+   "instagram",
+   "facebook"
+  ],
+  "media": [
+   "2026-11/launch-story.jpg"
+  ]
+ },
+ {
+  "id": "2026-11-15-ep001-versecard",
+  "when": "2026-11-15 10:15",
+  "title": "Episode 1 memory-verse card",
+  "type": "image",
+  "platforms": [
+   "instagram",
+   "facebook"
+  ],
+  "media": [
+   "2026-11/ep001-verse.jpg"
+  ],
+  "caption_instagram": "This week's memory verse 💛\n\"God saw everything that he had made, and, behold, it was very good.\" Genesis 1:31\n\nTry it at bedtime: say it together three times, then ask, \"What's your favourite thing God made?\"\n\n#MemoryVerse #BibleStoriesForKids #FaithAtHome",
+  "caption_facebook": "This week's memory verse 💛\n\"God saw everything that he had made, and, behold, it was very good.\" Genesis 1:31\n\nTry it at bedtime: say it together three times, then ask, \"What's your favourite thing God made?\""
+ },
+ {
+  "id": "2026-11-15-ep001-song",
+  "when": "2026-11-15 10:30",
+  "title": "Episode 1 song Reel",
+  "type": "reel",
+  "platforms": [
+   "instagram",
+   "facebook"
+  ],
+  "media": [
+   "2026-11/ep001-song.mp4"
+  ],
+  "caption_instagram": "Sing it with your little one 🎵 \"God saw everything that he had made…\" Genesis 1:31 · from Sparrow Street Episode 1\n\n🎵 Our songs are made with AI music tools, from our own lyrics.\n\n#KidsWorship #MemoryVerse #SundaySchool",
+  "caption_facebook": "Sing it with your little one 🎵 \"God saw everything that he had made…\" Genesis 1:31 · from Sparrow Street Episode 1\n\n🎵 Our songs are made with AI music tools, from our own lyrics.\n\nThe full episode: https://www.youtube.com/@SparrowStreetStories"
+ }
+]

@@ -1,22 +1,64 @@
 [
-  {
-    "id": "test-verse-card",
-    "test": true,
-    "when": "2026-11-10 12:00",
-    "title": "Robot test (dry run only, never published)",
-    "type": "image",
-    "platforms": ["instagram", "facebook"],
-    "media": ["test-verse-card.png"],
-    "caption_instagram": "Robot test: this is never published.",
-    "caption_facebook": "Robot test: this is never published."
-  },
-  {
-    "id": "test-story",
-    "test": true,
-    "when": "2026-11-10 12:00",
-    "title": "Robot story test (dry run only, never published)",
-    "type": "story",
-    "platforms": ["instagram", "facebook"],
-    "media": ["test-verse-card.png"]
-  }
+ {
+  "id": "test-verse-card",
+  "test": true,
+  "when": "2026-11-10 12:00",
+  "title": "Robot test (dry run only, never published)",
+  "type": "image",
+  "platforms": [
+   "instagram",
+   "facebook"
+  ],
+  "media": [
+   "test-verse-card.png"
+  ],
+  "caption_instagram": "Robot test: this is never published.",
+  "caption_facebook": "Robot test: this is never published."
+ },
+ {
+  "id": "test-story",
+  "test": true,
+  "when": "2026-11-10 12:00",
+  "title": "Robot story test (dry run only, never published)",
+  "type": "story",
+  "platforms": [
+   "instagram",
+   "facebook"
+  ],
+  "media": [
+   "test-verse-card.png"
+  ]
+ },
+ {
+  "id": "test-reel",
+  "test": true,
+  "when": "2026-11-10 12:00",
+  "title": "Robot Reel test (dry run only)",
+  "type": "reel",
+  "platforms": [
+   "instagram",
+   "facebook"
+  ],
+  "media": [
+   "2026-11/ep001-song.mp4"
+  ],
+  "caption_instagram": "test",
+  "caption_facebook": "test"
+ },
+ {
+  "id": "test-jpeg",
+  "test": true,
+  "when": "2026-11-10 12:00",
+  "title": "Robot JPEG test (dry run only)",
+  "type": "image",
+  "platforms": [
+   "instagram",
+   "facebook"
+  ],
+  "media": [
+   "2026-11/launch-post.jpg"
+  ],
+  "caption_instagram": "test",
+  "caption_facebook": "test"
+ }
 ]
