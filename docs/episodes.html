@@ -52,13 +52,19 @@
     </details>
   </div>
 </header>
+<aside class="notice" id="notice-2027" aria-label="News" hidden>
+  <div class="container notice__inner">
+    <p><strong>Three new episodes a week in January.</strong> From 4 January 2027, a new Bible story every Monday, Wednesday and Friday at 2pm UK time.</p>
+    <a href="#january">See the January episodes</a>
+  </div>
+</aside>
 
 <main>
   <section class="hero hero--page" aria-labelledby="ep-head">
     <div class="container hero__grid">
       <div class="hero__text">
         <h1 id="ep-head">Every episode, in&nbsp;order.</h1>
-        <p class="lead">A new Bible story every Tuesday and Friday at 2pm UK time.</p>
+        <p class="lead">A new Bible story every Tuesday and Friday at 2pm UK time, then every Monday, Wednesday and Friday from January.</p>
         <div class="actions"><a class="btn btn--primary" href="https://www.youtube.com/@SparrowStreetStories">Watch on YouTube</a></div>
       </div>
       <figure class="hero__picture sheet-photo">
@@ -69,7 +75,7 @@
 
   <section class="season" id="november" aria-labelledby="nov-head">
     <div class="container">
-      <h2 id="nov-head">November</h2>
+      <h2 id="nov-head">November 2026</h2>
       <p class="lead section__lead">Five favourite stories to start with.</p>
       <ul class="eps">
           <li>
@@ -108,8 +114,8 @@
 
   <section class="eps-section" id="christmas" aria-labelledby="dec-head">
     <div class="container">
-      <h2 id="dec-head">Christmas on Sparrow Street</h2>
-      <p class="lead section__lead">The Christmas story in eight episodes, in Bible order.</p>
+      <h2 id="dec-head">Christmas 2026</h2>
+      <p class="lead section__lead">Christmas on Sparrow Street: the Christmas story in Bible order, then the journey to Egypt.</p>
       <ul class="eps">
           <li>
             <img src="img/thumbs/ep027.jpg" width="640" height="360" alt="Sparrow Street episode Zechariah’s Big Surprise: Zechariah and the angel, Luke 1:5 to 25" loading="lazy">
@@ -149,6 +155,33 @@
             <tr><td><time datetime="2026-12-18">Fri 18 Dec</time></td><th scope="row">Don’t Be Afraid!</th><td>The shepherds hear good news, Luke 2:8 to 20</td></tr>
             <tr><td><time datetime="2026-12-22">Tue 22 Dec</time></td><th scope="row">The Light for Everyone</th><td>Simeon and Anna, Luke 2:22 to 38</td></tr>
             <tr><td><time datetime="2026-12-25">Fri 25 Dec</time></td><th scope="row">The Best Gift</th><td>The wise men bring gifts, Matthew 2:1 to 12</td></tr>
+            <tr><td><time datetime="2026-12-29">Tue 29 Dec</time></td><th scope="row">Safe in God’s Hands</th><td>Jesus is kept safe in Egypt, Matthew 2:13 to 23</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="season" id="january" aria-labelledby="jan-head">
+    <div class="container">
+      <h2 id="jan-head">January 2027</h2>
+      <p class="lead section__lead">Three a week: Monday, Wednesday and Friday at 2pm UK time.</p>
+      <table class="index">
+        <caption class="visually-hidden">January 2027 episodes, with the Bible story and passage</caption>
+        <thead><tr><th scope="col">Out</th><th scope="col">The Bible story</th><th scope="col">Passage</th></tr></thead>
+        <tbody>
+            <tr><td><time datetime="2027-01-01">Fri 1 Jan</time></td><th scope="row">The boy Jesus at the temple</th><td>Luke 2:41 to 52</td></tr>
+            <tr><td><time datetime="2027-01-04">Mon 4 Jan</time></td><th scope="row">Zacchaeus</th><td>Luke 19:1 to 10</td></tr>
+            <tr><td><time datetime="2027-01-06">Wed 6 Jan</time></td><th scope="row">God calls Samuel</th><td>1 Samuel 3:1 to 10</td></tr>
+            <tr><td><time datetime="2027-01-08">Fri 8 Jan</time></td><th scope="row">Ruth and Naomi</th><td>Ruth 1 and 2</td></tr>
+            <tr><td><time datetime="2027-01-11">Mon 11 Jan</time></td><th scope="row">The lost sheep</th><td>Luke 15:3 to 7</td></tr>
+            <tr><td><time datetime="2027-01-13">Wed 13 Jan</time></td><th scope="row">Blind Bartimaeus</th><td>Mark 10:46 to 52</td></tr>
+            <tr><td><time datetime="2027-01-15">Fri 15 Jan</time></td><th scope="row">Jesus washes his friends’ feet</th><td>John 13:1 to 17</td></tr>
+            <tr><td><time datetime="2027-01-18">Mon 18 Jan</time></td><th scope="row">David and Goliath</th><td>1 Samuel 17</td></tr>
+            <tr><td><time datetime="2027-01-20">Wed 20 Jan</time></td><th scope="row">Daniel and the lions</th><td>Daniel 6</td></tr>
+            <tr><td><time datetime="2027-01-22">Fri 22 Jan</time></td><th scope="row">Jonah</th><td>Jonah 1 to 3</td></tr>
+            <tr><td><time datetime="2027-01-25">Mon 25 Jan</time></td><th scope="row">Baby Moses and Miriam</th><td>Exodus 2:1 to 10</td></tr>
+            <tr><td><time datetime="2027-01-27">Wed 27 Jan</time></td><th scope="row">Noah and the rainbow promise</th><td>Genesis 6 to 9</td></tr>
+            <tr><td><time datetime="2027-01-29">Fri 29 Jan</time></td><th scope="row">God sends the Holy Spirit</th><td>Acts 2:1 to 41</td></tr>
         </tbody>
       </table>
     </div>
@@ -198,6 +231,14 @@
     <p class="footer__legal">Scripture quotations are from the World English Bible (British Edition), which is in the public domain.</p>
   </div>
 </footer>
+
+<script>
+  (() => {
+    const n = document.getElementById('notice-2027');
+    const now = new Date();
+    if (n && now >= new Date('2026-12-26T00:00:00Z') && now < new Date('2027-02-01T00:00:00Z')) n.hidden = false;
+  })();
+</script>
 
 <script>
   document.querySelectorAll('[data-menu]').forEach((m) => {

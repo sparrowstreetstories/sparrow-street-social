@@ -243,3 +243,16 @@ a { color: var(--color-accent-2); }
   .eps li:first-child { grid-row: auto; }
 }
 @media (max-width: 40rem) { .eps { grid-template-columns: minmax(0, 1fr); } }
+
+/* the January 2027 notice: shown by script from 26 Dec 2026 to 31 Jan 2027 */
+.notice { background: var(--color-butter); color: var(--color-ink); border-bottom: 1px solid var(--color-rule); }
+.notice__inner { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-xs) var(--space-lg); padding-block: var(--space-sm); }
+.notice p { margin: 0; max-width: 60ch; }
+.notice a { color: var(--color-ink); text-decoration: underline; }
+.notice a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 2px; }
+.switch { flex-wrap: wrap; }
+@media (max-width: 30rem) {
+  .switch { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; border-radius: var(--radius-card); }
+  .switch__opt { padding: var(--space-2xs) var(--space-xs); border-radius: var(--radius-input); font-size: var(--text-sm); line-height: 1.2; }
+}
+

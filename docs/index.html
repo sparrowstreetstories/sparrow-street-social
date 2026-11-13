@@ -55,6 +55,12 @@
     </details>
   </div>
 </header>
+<aside class="notice" id="notice-2027" aria-label="News" hidden>
+  <div class="container notice__inner">
+    <p><strong>Three new episodes a week in January.</strong> From 4 January 2027, a new Bible story every Monday, Wednesday and Friday at 2pm UK time.</p>
+    <a href="#season">See the January episodes</a>
+  </div>
+</aside>
 
 <main>
   <section class="hero" aria-labelledby="hero-head">
@@ -78,13 +84,14 @@
       <div class="season__head">
         <h2 id="season-head">This season on Sparrow Street</h2>
         <div class="switch" role="group" aria-label="Choose a month" data-switch>
-          <button type="button" class="switch__opt" aria-pressed="true" data-show="nov">November</button>
-          <button type="button" class="switch__opt" aria-pressed="false" data-show="dec">Christmas</button>
+          <button type="button" class="switch__opt" aria-pressed="true" data-show="nov">November 2026</button>
+          <button type="button" class="switch__opt" aria-pressed="false" data-show="dec">Christmas 2026</button>
+          <button type="button" class="switch__opt" aria-pressed="false" data-show="jan">January 2027</button>
         </div>
       </div>
       <div data-state="nov">
         <table class="index">
-          <caption class="visually-hidden">November episodes, with the Bible story and passage</caption>
+          <caption class="visually-hidden">November 2026 episodes, with the Bible story and passage</caption>
           <thead><tr><th scope="col">Out</th><th scope="col">The Bible story</th><th scope="col">Passage</th></tr></thead>
           <tbody>
             <tr class="index__lead"><td><time datetime="2026-11-13">Fri 13 Nov</time></td><th scope="row">God makes the world</th><td>Genesis 1 and 2</td></tr>
@@ -97,7 +104,7 @@
       </div>
       <div data-state="dec">
         <table class="index">
-          <caption class="visually-hidden">The Christmas story in eight episodes, in Bible order</caption>
+          <caption class="visually-hidden">December 2026 episodes: the Christmas story in Bible order</caption>
           <thead><tr><th scope="col">Out</th><th scope="col">The Bible story</th><th scope="col">Passage</th></tr></thead>
           <tbody>
             <tr class="index__lead"><td><time datetime="2026-12-01">Tue 1 Dec</time></td><th scope="row">Zechariah’s big surprise</th><td>Luke 1:5 to 25</td></tr>
@@ -108,6 +115,28 @@
             <tr><td><time datetime="2026-12-18">Fri 18 Dec</time></td><th scope="row">The shepherds hear good news</th><td>Luke 2:8 to 20</td></tr>
             <tr><td><time datetime="2026-12-22">Tue 22 Dec</time></td><th scope="row">Simeon and Anna</th><td>Luke 2:22 to 38</td></tr>
             <tr><td><time datetime="2026-12-25">Fri 25 Dec</time></td><th scope="row">The wise men bring gifts</th><td>Matthew 2:1 to 12</td></tr>
+            <tr><td><time datetime="2026-12-29">Tue 29 Dec</time></td><th scope="row">Jesus is kept safe in Egypt</th><td>Matthew 2:13 to 23</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div data-state="jan">
+        <table class="index">
+          <caption class="visually-hidden">January 2027 episodes, three a week, with the Bible story and passage</caption>
+          <thead><tr><th scope="col">Out</th><th scope="col">The Bible story</th><th scope="col">Passage</th></tr></thead>
+          <tbody>
+            <tr class="index__lead"><td><time datetime="2027-01-01">Fri 1 Jan</time></td><th scope="row">The boy Jesus at the temple</th><td>Luke 2:41 to 52</td></tr>
+            <tr><td><time datetime="2027-01-04">Mon 4 Jan</time></td><th scope="row">Zacchaeus</th><td>Luke 19:1 to 10</td></tr>
+            <tr><td><time datetime="2027-01-06">Wed 6 Jan</time></td><th scope="row">God calls Samuel</th><td>1 Samuel 3:1 to 10</td></tr>
+            <tr><td><time datetime="2027-01-08">Fri 8 Jan</time></td><th scope="row">Ruth and Naomi</th><td>Ruth 1 and 2</td></tr>
+            <tr><td><time datetime="2027-01-11">Mon 11 Jan</time></td><th scope="row">The lost sheep</th><td>Luke 15:3 to 7</td></tr>
+            <tr><td><time datetime="2027-01-13">Wed 13 Jan</time></td><th scope="row">Blind Bartimaeus</th><td>Mark 10:46 to 52</td></tr>
+            <tr><td><time datetime="2027-01-15">Fri 15 Jan</time></td><th scope="row">Jesus washes his friends’ feet</th><td>John 13:1 to 17</td></tr>
+            <tr><td><time datetime="2027-01-18">Mon 18 Jan</time></td><th scope="row">David and Goliath</th><td>1 Samuel 17</td></tr>
+            <tr><td><time datetime="2027-01-20">Wed 20 Jan</time></td><th scope="row">Daniel and the lions</th><td>Daniel 6</td></tr>
+            <tr><td><time datetime="2027-01-22">Fri 22 Jan</time></td><th scope="row">Jonah</th><td>Jonah 1 to 3</td></tr>
+            <tr><td><time datetime="2027-01-25">Mon 25 Jan</time></td><th scope="row">Baby Moses and Miriam</th><td>Exodus 2:1 to 10</td></tr>
+            <tr><td><time datetime="2027-01-27">Wed 27 Jan</time></td><th scope="row">Noah and the rainbow promise</th><td>Genesis 6 to 9</td></tr>
+            <tr><td><time datetime="2027-01-29">Fri 29 Jan</time></td><th scope="row">God sends the Holy Spirit</th><td>Acts 2:1 to 41</td></tr>
           </tbody>
         </table>
       </div>
@@ -226,6 +255,13 @@
 </footer>
 
 <script>
+  (() => {
+    const n = document.getElementById('notice-2027');
+    const now = new Date();
+    if (n && now >= new Date('2026-12-26T00:00:00Z') && now < new Date('2027-02-01T00:00:00Z')) n.hidden = false;
+  })();
+</script>
+<script>
   document.querySelectorAll('[data-switch]').forEach((group) => {
     const section = group.closest('section');
     const opts = group.querySelectorAll('[data-show]');
@@ -234,7 +270,8 @@
       opts.forEach((o) => o.setAttribute('aria-pressed', String(o.dataset.show === key)));
     };
     opts.forEach((o) => o.addEventListener('click', () => show(o.dataset.show)));
-    show('nov');
+    const now = new Date();
+    show(now >= new Date('2027-01-01T00:00:00Z') ? 'jan' : now >= new Date('2026-12-01T00:00:00Z') ? 'dec' : 'nov');
   });
 </script>
 <script>
