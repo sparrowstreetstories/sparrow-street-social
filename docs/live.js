@@ -68,6 +68,8 @@
     const a = document.createElement('a');
     a.href = 'https://www.youtube.com/watch?v=' + id;
     a.textContent = text;
+    a.target = '_blank';
+    a.rel = 'noopener';
     return a;
   };
   document.querySelectorAll('time[datetime]').forEach((t) => {
@@ -82,7 +84,7 @@
       if (!img || img.closest('a')) return;
       const a = link(v[0], '');
       a.className = 'eps__watch';
-      a.setAttribute('aria-label', 'Watch ' + head.textContent + ' on YouTube');
+      a.setAttribute('aria-label', 'Watch ' + head.textContent + ' on YouTube (opens in a new tab)');
       img.replaceWith(a);
       const play = document.createElement('span');
       play.className = 'eps__play';
@@ -91,6 +93,7 @@
       return;
     }
     const a = link(v[0], head.textContent);
+    a.title = 'Opens YouTube in a new tab';
     head.textContent = '';
     head.append(a);
   });
