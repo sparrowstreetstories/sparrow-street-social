@@ -77,16 +77,21 @@
     const row = t.closest('table.index tbody tr');
     const head = card ? card.querySelector('h3') : row ? row.querySelector('th') : null;
     if (!head || head.querySelector('a')) return;
+    if (card) {
+      const img = card.querySelector('img');
+      if (!img || img.closest('a')) return;
+      const a = link(v[0], '');
+      a.className = 'eps__watch';
+      a.setAttribute('aria-label', 'Watch ' + head.textContent + ' on YouTube');
+      img.replaceWith(a);
+      const play = document.createElement('span');
+      play.className = 'eps__play';
+      play.setAttribute('aria-hidden', 'true');
+      a.append(img, play);
+      return;
+    }
     const a = link(v[0], head.textContent);
     head.textContent = '';
     head.append(a);
-    if (card) {
-      a.className = 'eps__watch';
-      card.classList.add('is-live');
-      const note = document.createElement('p');
-      note.className = 'eps__live';
-      note.textContent = 'Watch now on YouTube';
-      card.append(note);
-    }
   });
 })();
