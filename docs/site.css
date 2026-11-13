@@ -256,3 +256,18 @@ a { color: var(--color-accent-2); }
   .switch__opt { padding: var(--space-2xs) var(--space-xs); border-radius: var(--radius-input); font-size: var(--text-sm); line-height: 1.2; }
 }
 
+
+/* Live episodes: the whole card opens the video on YouTube once it has gone live (live.js) */
+.eps li.is-live { position: relative; }
+.eps__watch { color: inherit; text-decoration: none; }
+.eps__watch::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius-stock); }
+.eps__watch:focus-visible { outline: none; }
+.eps__watch:focus-visible::after { outline: 3px solid var(--color-focus); outline-offset: 4px; }
+.eps li.is-live:hover h3 { color: var(--color-accent-2); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.12em; }
+.eps li.is-live img { transition: transform 0.2s var(--ease-spring, ease-out); }
+.eps li.is-live:hover img { transform: translateY(-3px); }
+.eps__live { margin-top: var(--space-2xs); color: var(--color-accent-2); font-weight: 600; text-decoration: underline; text-underline-offset: 0.16em; }
+.index th a { color: inherit; text-decoration: underline; text-decoration-color: var(--color-accent-2); text-underline-offset: 0.16em; }
+.index th a:hover { color: var(--color-accent-2); }
+.index th a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .eps li.is-live img { transition: none; } .eps li.is-live:hover img { transform: none; } }
