@@ -271,3 +271,8 @@ a { color: var(--color-accent-2); }
 .index th a:hover { color: var(--color-accent-2); }
 .index th a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { .eps__watch img, .eps__play { transition: none; } .eps__watch:hover img, .eps__watch:hover .eps__play { transform: none; } }
+
+/* The hero headline scales with its own column, so "little ones." never breaks inside a word on mid-size screens */
+.hero__text { container-type: inline-size; }
+.hero h1 { font-size: min(var(--text-display), 24cqi); }
+.hero--page h1 { font-size: min(var(--text-display), 21cqi); }
