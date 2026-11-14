@@ -52,7 +52,13 @@
     </details>
   </div>
 </header>
-<aside class="notice" id="notice-2027" aria-label="News" hidden>
+<aside class="notice" id="notice-christmas" aria-label="News" data-notice-from="2026-11-23T00:00:00Z" data-notice-until="2026-12-26T00:00:00Z" hidden>
+  <div class="container notice__inner">
+    <p><strong>Christmas on Sparrow Street starts on 1 December.</strong> The whole Christmas story in Bible order, in eight new episodes, every Tuesday and Friday at 2pm UK time until Christmas Day.</p>
+    <a href="#christmas">See the Christmas episodes</a>
+  </div>
+</aside>
+<aside class="notice" id="notice-2027" aria-label="News" data-notice-from="2026-12-26T00:00:00Z" data-notice-until="2027-02-01T00:00:00Z" hidden>
   <div class="container notice__inner">
     <p><strong>Three new episodes a week in January.</strong> From 4 January 2027, a new Bible story every Monday, Wednesday and Friday at 2pm UK time.</p>
     <a href="#january">See the January episodes</a>
@@ -234,9 +240,16 @@
 
 <script>
   (() => {
-    const n = document.getElementById('notice-2027');
+    // Date-gated news notices: each shows from data-notice-from until data-notice-until
     const now = new Date();
-    if (n && now >= new Date('2026-12-26T00:00:00Z') && now < new Date('2027-02-01T00:00:00Z')) n.hidden = false;
+    document.querySelectorAll('[data-notice-from]').forEach((n) => {
+      if (now >= new Date(n.dataset.noticeFrom) && now < new Date(n.dataset.noticeUntil)) n.hidden = false;
+    });
+    // A notice link can open a tab in the season switch (e.g. the Christmas episodes)
+    document.querySelectorAll('[data-switch-to]').forEach((a) => a.addEventListener('click', () => {
+      const b = document.querySelector('[data-show="' + a.dataset.switchTo + '"]');
+      if (b) b.click();
+    }));
   })();
 </script>
 
