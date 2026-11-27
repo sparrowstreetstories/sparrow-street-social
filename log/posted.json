@@ -306,5 +306,33 @@
    "link": "https://www.instagram.com/reel/DgNlM9dPboQ/",
    "status": "posted"
   }
+ },
+ "2026-11-27-ep009-release": {
+  "facebook": {
+   "at": "2026-11-27 14:45",
+   "id": "1324262767447942_122110598625547347",
+   "link": "https://www.facebook.com/1324262767447942_122110598625547347",
+   "status": "posted"
+  },
+  "instagram": {
+   "at": "2026-11-27 14:45",
+   "id": "17900678127681577",
+   "link": "https://www.instagram.com/p/DgP7P1PDo0Q/",
+   "status": "posted"
+  }
+ },
+ "2026-11-27-ep009-story": {
+  "facebook": {
+   "at": "2026-11-27 14:46",
+   "id": "2805886669805606",
+   "link": "https://www.facebook.com/2805886669805606",
+   "status": "posted"
+  },
+  "instagram": {
+   "at": "2026-11-27 14:46",
+   "id": "18453593338123945",
+   "link": "https://www.instagram.com/stories/sparrowstreetstories/4039708133374703765",
+   "status": "posted"
+  }
  }
 }
